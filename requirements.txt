@@ -4,3 +4,4 @@ autogen-agentchat
 python-dotenv
 streamlit
 openai
+tiktoken
