@@ -3,12 +3,13 @@ from debate import debate,teamConfig
 import asyncio
 st.title("Agent Debate!")
 
-topic=st.text_input("Enter the topic of the debate","shall US government ban tiktok?")
+topic=st.text_input("Enter the topic of the debate")
 
 clicked=st.button('Start',type='primary')
+
 chat=st.container()
 
-if clicked:
+if clicked and topic.strip()!="":
     chat.empty()
     async def main():
         team= await teamConfig(topic)
